@@ -51,7 +51,7 @@ const Home = () => {
                     <p>
                         Welcome to the blog of{" "}
                         <span className="bg-black p-1 text-white">
-                            Jane's world
+                            Jane&apos;s world
                         </span>
                     </p>
                 </section>
@@ -62,7 +62,7 @@ const Home = () => {
                         title="Jane"
                     />
                     <div className="absolute -translate-x-1/2 -translate-y-1/2 left-[20%] top-1/2 flex flex-col gap-y-4 md:left-[25%]">
-                        <h2 className="text-white text-4xl">Jane's</h2>
+                        <h2 className="text-white text-4xl">Jane&apos;s</h2>
                         <p className="hidden text-6xl font-bold text-white uppercase md:block">
                             Fashion blog
                         </p>
