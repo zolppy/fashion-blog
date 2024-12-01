@@ -43,7 +43,8 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main>
+            {/* max-w-[1536px]: tailwind css breakpoint for 2xl */}
+            <main className="min-w-[320px] max-w-[1536px] mx-auto">
                 <section className="flex flex-col gap-y-6 px-12 py-16 items-center bg-white">
                     <h1 className="uppercase font-semibold text-5xl">
                         Jane Bloglife
