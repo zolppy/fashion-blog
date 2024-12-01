@@ -14,6 +14,7 @@
 - Responsive design;
 - Subscribe form;
 - Like button;
+- "To the top" button;
 - Comments of posts.
 
 ## Technologies
