@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { oswald } from "@/app/font";
 import "@/app/globals.css";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
             <body className={`${oswald.className} antialiased bg-[#f1f1f1]`}>
                 {children}
             </body>
+            <GoogleAnalytics gaId="G-BL0G7C98H9" />
         </html>
     );
 }
