@@ -1,0 +1,50 @@
+import { ReactNode } from "react";
+import {
+    BsFacebook,
+    BsInstagram,
+    BsSnapchat,
+    BsPinterest,
+    BsTwitter,
+    BsLinkedin,
+    BsSearch,
+} from "react-icons/bs";
+
+export const Button = ({ children }: { children: ReactNode }) => {
+    return (
+        <button className="px-4 py-3 transition-colors duration-300 hover:bg-gray-400 hover:text-black">
+            {children}
+        </button>
+    );
+};
+
+const Header = () => {
+    return (
+        <header className="hidden md:flex bg-black text-white justify-between">
+            <div className="inline-flex">
+                <Button>
+                    <BsFacebook className="text-sm" />
+                </Button>
+                <Button>
+                    <BsInstagram className="text-sm" />
+                </Button>
+                <Button>
+                    <BsSnapchat className="text-sm" />
+                </Button>
+                <Button>
+                    <BsPinterest className="text-sm" />
+                </Button>
+                <Button>
+                    <BsTwitter className="text-sm" />
+                </Button>
+                <Button>
+                    <BsLinkedin className="text-sm" />
+                </Button>
+            </div>
+            <Button>
+                <BsSearch />
+            </Button>
+        </header>
+    );
+};
+
+export default Header;
