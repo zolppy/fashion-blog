@@ -15,3 +15,8 @@
 - Subscribe form
 - Like button
 - Comments of posts
+
+## Technologies
+- Next.js
+- Tailwind CSS
+- TypeScript
