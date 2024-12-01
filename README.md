@@ -9,3 +9,9 @@
     </ul>
     <p>Landing page for a fashion blog, developed with Next.js and Tailwind CSS.</p>
 </div>
+
+## Features
+- Responsive design
+- Subscribe form
+- Like button
+- Comments of posts
