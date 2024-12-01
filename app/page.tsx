@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { RefObject, useRef, useState } from "react";
 import Image from "next/image";
 import {
     BsFacebook,
@@ -31,6 +31,7 @@ import inspirations from "@/app/mock/inspiration";
 
 const Home = () => {
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+    const topRef = useRef<HTMLDivElement | null>(null);
 
     const openSubscriptionModal = () => {
         setModalIsOpen(true);
@@ -40,8 +41,13 @@ const Home = () => {
         setModalIsOpen(false);
     };
 
+    const scrollToSection = (ref: RefObject<HTMLElement>) => {
+        ref?.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <>
+            <div ref={topRef}></div>
             <Header />
             {/* max-w-[1536px]: tailwind css breakpoint for 2xl */}
             <main className="min-w-[320px] max-w-[1536px] mx-auto">
@@ -227,7 +233,7 @@ const Home = () => {
                     closeSubscriptionModal={closeSubscriptionModal}
                 />
             </main>
-            <Footer />
+            <Footer scrollToSection={scrollToSection} topRef={topRef} />
         </>
     );
 };
