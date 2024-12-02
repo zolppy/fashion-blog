@@ -4,7 +4,6 @@ import {
     createContext,
     MutableRefObject,
     ReactNode,
-    RefObject,
     useContext,
     useRef,
 } from "react";
