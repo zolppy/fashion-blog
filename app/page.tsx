@@ -112,7 +112,7 @@ const Home = () => {
                                 src={avatarGirl2}
                                 alt="Lorem ipsum dolor sit amet consectetur"
                                 title="Lorem ispum"
-                                className="w-full"
+                                className="w-full grayscale-[70%]"
                             />
                             <div className="bg-black text-white p-4 flex flex-col gap-y-4">
                                 <h2 className="text-xl">My Name</h2>
@@ -157,7 +157,7 @@ const Home = () => {
                                 <div
                                     className={`${openSans.className} bg-gray-200 h-[200px] grid place-items-center`}
                                 >
-                                    Your AD here
+                                    AD here
                                 </div>
                             </WhiteContainer>
                         </section>

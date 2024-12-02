@@ -9,7 +9,7 @@ interface ITag {
 const Tag = ({ children, isSelected }: ITag) => {
     const theme = isSelected
         ? "bg-black text-white"
-        : "bg-gray-200 hover:bg-gray-400 transition-colors duration-300";
+        : "bg-gray-200 active:bg-gray-400 lg:hover:bg-gray-400 lg:transition-colors lg:duration-300";
 
     return (
         <button className={`${openSans.className} ${theme} text-xs p-1`}>

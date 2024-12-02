@@ -11,7 +11,7 @@ import {
 
 export const Button = ({ children }: { children: ReactNode }) => {
     return (
-        <button className="px-4 py-3 transition-colors duration-300 hover:bg-gray-400 hover:text-black">
+        <button className="px-4 py-3 active:bg-gray-400 active:text-black lg:hover:bg-gray-400 lg:hover:text-black lg:transition-colors lg:duration-300">
             {children}
         </button>
     );

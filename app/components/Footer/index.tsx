@@ -18,7 +18,7 @@ const Footer = ({ scrollToSection, topRef }: IFooter) => {
                 <a
                     href="https://github.com/zolppy"
                     target="_blank"
-                    className="hover:underline"
+                    className="underline"
                 >
                     Zolppy
                 </a>
