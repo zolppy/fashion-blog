@@ -7,7 +7,7 @@
         <img src="https://img.shields.io/badge/REACT ICONS-5.3.0-violet" />
         <img src="https://img.shields.io/badge/FRAMER MOTION-11.12.0-pink" />
         <img src="https://img.shields.io/badge/DOCKER-27.3.1-cyan" />
-        <img src="https://img.shields.io/badge/STATUS-FINISHED-orange" />
+        <img src="https://img.shields.io/badge/STATUS-FINISHED-green" />
         <img src="https://img.shields.io/badge/LICENSE-MIT-yellow" />
     </ul>
     <p>Landing page for a fashion blog, developed with Next.js and Tailwind CSS.</p>
