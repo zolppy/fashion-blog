@@ -1,8 +1,4 @@
-interface ITag {
-    id: number;
-    title: string;
-    isSelected: boolean;
-}
+import type ITag from "@/app/utils/interfaces/tag";
 
 const tags: ITag[] = [
     {

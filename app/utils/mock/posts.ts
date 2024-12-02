@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import type IPost from "@/app/utils/interfaces/post";
 import girlHat from "@/public/girl-hat.jpg";
 import manHat from "@/public/man-hat.jpg";
 import smoke from "@/public/avatar-smoke.jpg";
@@ -9,42 +9,17 @@ import girlMountain from "@/public/girl-mountain.jpg";
 import boy from "@/public/boy.jpg";
 import girlHood from "@/public/girl-hood.jpg";
 
-interface IParagraph {
-    id: number;
-    content: string;
-}
-
-export interface IReply {
-    id: number;
-    name: string;
-    time: string;
-    comment: IParagraph[];
-    imagePath: StaticImageData;
-    imageAlt: string;
-    imageTitle: string;
-}
-
-export interface IPost {
-    id: number;
-    title: string;
-    description: string;
-    date: string;
-    imagePath: StaticImageData;
-    imageAlt: string;
-    imageTitle: string;
-    paragraphs: IParagraph[];
-    replies: IReply[];
-}
-
 const posts: IPost[] = [
     {
         id: 1,
-        title: "Title Heading",
+        postTitle: "Title Heading",
         description: "Lorem ipsum dolor sit amet",
         date: "May 2, 2016",
-        imagePath: girlHat,
-        imageAlt: "Woman wearing a hat. There is a sea in the background.",
-        imageTitle: "Girl Hat",
+        img: {
+            src: girlHat,
+            alt: "Woman wearing a hat. There is a sea in the background.",
+            imgTitle: "Girl Hat",
+        },
         paragraphs: [
             {
                 id: 1,
@@ -68,20 +43,24 @@ const posts: IPost[] = [
                         content: "Great blog post! Following",
                     },
                 ],
-                imagePath: smoke,
-                imageAlt: "A man wearing a black jacket and smoking",
-                imageTitle: "George",
+                img: {
+                    src: smoke,
+                    alt: "A man wearing a black jacket and smoking",
+                    imgTitle: "George",
+                },
             },
         ],
     },
     {
         id: 2,
-        title: "Title Heading",
+        postTitle: "Title Heading",
         description: "Lorem ipsum dolor sit amet",
         date: "April 23, 2016",
-        imagePath: manHat,
-        imageAlt: "Black man wearing black hat, glasses and dress shirt.",
-        imageTitle: "Man Hat",
+        img: {
+            src: manHat,
+            alt: "Black man wearing black hat, glasses and dress shirt.",
+            imgTitle: "Man Hat",
+        },
         paragraphs: [
             {
                 id: 1,
@@ -106,9 +85,11 @@ const posts: IPost[] = [
                             "Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     },
                 ],
-                imagePath: girlTrain,
-                imageAlt: "Lorem ipsum dolor sit amet consectetur",
-                imageTitle: "Lorem ipsum",
+                img: {
+                    src: girlTrain,
+                    alt: "Lorem ipsum dolor sit amet consectetur",
+                    imgTitle: "Lorem ipsum",
+                },
             },
             {
                 id: 2,
@@ -120,20 +101,24 @@ const posts: IPost[] = [
                         content: "Love hats!!",
                     },
                 ],
-                imagePath: girl,
-                imageAlt: "Lorem ipsum dolor sit amet consectetur",
-                imageTitle: "Lorem ipsum",
+                img: {
+                    src: girl,
+                    alt: "Lorem ipsum dolor sit amet consectetur",
+                    imgTitle: "Lorem ipsum",
+                },
             },
         ],
     },
     {
         id: 3,
-        title: "Title Heading",
+        postTitle: "Title Heading",
         description: "Lorem ipsum dolor sit amet",
         date: "April 7, 2016",
-        imagePath: runway,
-        imageAlt: "Lorem ipsum dolor sit amet consectetur",
-        imageTitle: "Lorem ipsum",
+        img: {
+            src: runway,
+            alt: "Lorem ipsum dolor sit amet consectetur",
+            imgTitle: "Lorem ipsum",
+        },
         paragraphs: [
             {
                 id: 1,
@@ -158,9 +143,11 @@ const posts: IPost[] = [
                             "That was a great runway show! Thanks for everything.",
                     },
                 ],
-                imagePath: girlMountain,
-                imageAlt: "Lorem ipsum dolor sit amet consectetur",
-                imageTitle: "Jane",
+                img: {
+                    src: girlMountain,
+                    alt: "Lorem ipsum dolor sit amet consectetur",
+                    imgTitle: "Jane",
+                },
             },
             {
                 id: 2,
@@ -173,9 +160,11 @@ const posts: IPost[] = [
                             "Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
                     },
                 ],
-                imagePath: boy,
-                imageAlt: "Lorem ipsum dolor sit amet consectetur",
-                imageTitle: "John",
+                img: {
+                    src: boy,
+                    alt: "Lorem ipsum dolor sit amet consectetur",
+                    imgTitle: "John",
+                },
             },
             {
                 id: 3,
@@ -187,9 +176,11 @@ const posts: IPost[] = [
                         content: "Cant wait for the runway to start!",
                     },
                 ],
-                imagePath: girlHood,
-                imageAlt: "Lorem ipsum dolor sit amet consectetur",
-                imageTitle: "Anja",
+                img: {
+                    src: girlHood,
+                    alt: "Lorem ipsum dolor sit amet consectetur",
+                    imgTitle: "Anja",
+                },
             },
         ],
     },

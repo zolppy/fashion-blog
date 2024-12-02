@@ -1,7 +1,7 @@
 import { BsX } from "react-icons/bs";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import SubscribeButtonRed from "../SubscribeButtonRed";
-import { openSans } from "@/app/font";
+import { openSans } from "@/app/utils/font";
 
 interface ISubscriptionModal {
     modalIsOpen: boolean;
@@ -9,6 +9,12 @@ interface ISubscriptionModal {
 }
 
 const variant: Variants = {
+    initial: { opacity: 0 },
+    visible: { opacity: 0.5 },
+    hidden: { opacity: 0 },
+};
+
+const variant2: Variants = {
     initial: { opacity: 0 },
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
@@ -22,9 +28,16 @@ const SubscriptionModal = ({
         <AnimatePresence>
             {modalIsOpen && (
                 <>
-                    <div className="fixed top-0 left-0 w-svw h-svh bg-black opacity-50"></div>
                     <motion.div
                         variants={variant}
+                        initial="initial"
+                        animate="visible"
+                        exit="hidden"
+                        transition={{ type: "spring", duration: 0.8 }}
+                        className="fixed top-0 left-0 w-svw h-svh bg-black opacity-50"
+                    ></motion.div>
+                    <motion.div
+                        variants={variant2}
                         initial="initial"
                         animate="visible"
                         exit="hidden"

@@ -9,7 +9,11 @@ import {
     BsSearch,
 } from "react-icons/bs";
 
-export const Button = ({ children }: { children: ReactNode }) => {
+interface IButton {
+    children: ReactNode;
+}
+
+const Button = ({ children }: IButton) => {
     return (
         <button className="px-4 py-3 active:bg-gray-400 active:text-black lg:hover:bg-gray-400 lg:hover:text-black lg:transition-colors lg:duration-300">
             {children}

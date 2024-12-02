@@ -1,15 +1,12 @@
-import { RefObject } from "react";
+import { useTopRefCtx } from "@/app/context/TopRefCtx";
 import { BsArrowUp } from "react-icons/bs";
 
-interface IT3Button {
-    scrollToSection: (ref: RefObject<HTMLElement>) => void;
-    topRef: RefObject<HTMLElement>;
-}
+const TopButton = () => {
+    const { scrollToTop } = useTopRefCtx();
 
-const T3Button = ({ scrollToSection, topRef }: IT3Button) => {
     return (
         <button
-            onClick={() => scrollToSection(topRef)}
+            onClick={scrollToTop}
             className="bg-black text-white p-3 flex gap-x-3 items-center w-fit lg:transition-colors lg:duration-300 lg:hover:bg-gray-400 lg:hover:text-black"
         >
             <BsArrowUp /> To the top
@@ -17,4 +14,4 @@ const T3Button = ({ scrollToSection, topRef }: IT3Button) => {
     );
 };
 
-export default T3Button;
+export default TopButton;

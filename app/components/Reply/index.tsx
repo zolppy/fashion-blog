@@ -1,22 +1,17 @@
-import { IReply } from "@/app/mock/posts";
+import type IReply from "@/app/utils/interfaces/reply";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
 
-const Reply = ({
-    name,
-    time,
-    comment,
-    imagePath,
-    imageAlt,
-    imageTitle,
-}: Omit<IReply, "id">) => {
+const Reply = ({ name, time, comment, img }: Omit<IReply, "id">) => {
+    const { src, alt, imgTitle } = img;
+
     return (
         <li className="flex flex-col gap-y-4 text-left">
             <div className="flex flex-col gap-y-2">
                 <Image
-                    src={imagePath}
-                    alt={imageAlt}
-                    title={imageTitle}
+                    src={src}
+                    alt={alt}
+                    title={imgTitle}
                     className="w-[90px]"
                 />
                 <p>

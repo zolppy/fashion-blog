@@ -1,18 +1,12 @@
-import { RefObject } from "react";
-import T3Button from "@/app/components/T3Button/T3Button";
-import { openSans } from "@/app/font";
+import TopButton from "@/app/components/TopButton";
+import { openSans } from "@/app/utils/font";
 
-interface IFooter {
-    scrollToSection: (ref: RefObject<HTMLElement>) => void;
-    topRef: RefObject<HTMLElement>;
-}
-
-const Footer = ({ scrollToSection, topRef }: IFooter) => {
+const Footer = () => {
     return (
         <footer
             className={`${openSans.className} bg-neutral-600 p-8 flex flex-col gap-y-4`}
         >
-            <T3Button scrollToSection={scrollToSection} topRef={topRef} />
+            <TopButton />
             <p className="text-white">
                 Powered by{" "}
                 <a

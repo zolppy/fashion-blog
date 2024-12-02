@@ -21,17 +21,18 @@ import SubscribeButtonRed from "@/app/components/SubscribeButtonRed";
 import SubscriptionModal from "@/app/components/SubscriptionModal";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import posts from "@/app/mock/posts";
-import popularPosts from "@/app/mock/popularPosts";
-import tags from "@/app/mock/tags";
-import { openSans } from "@/app/font";
+import { useTopRefCtx } from "@/app/context/TopRefCtx";
+import posts from "@/app/utils/mock/posts";
+import popularPosts from "@/app/utils/mock/popularPosts";
+import tags from "@/app/utils/mock/tags";
+import { openSans } from "@/app/utils/font";
 import jane from "@/public/jane.jpg";
 import avatarGirl2 from "@/public/avatar-girl-2.jpg";
-import inspirations from "@/app/mock/inspiration";
+import inspirations from "@/app/utils/mock/inspiration";
 
 const Home = () => {
+    const { topRef } = useTopRefCtx();
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-    const topRef = useRef<HTMLDivElement | null>(null);
 
     const openSubscriptionModal = () => {
         setModalIsOpen(true);
@@ -39,10 +40,6 @@ const Home = () => {
 
     const closeSubscriptionModal = () => {
         setModalIsOpen(false);
-    };
-
-    const scrollToSection = (ref: RefObject<HTMLElement>) => {
-        ref?.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
@@ -83,23 +80,19 @@ const Home = () => {
                         {posts?.map(
                             ({
                                 id,
-                                title,
+                                postTitle,
                                 description,
                                 date,
-                                imagePath,
-                                imageAlt,
-                                imageTitle,
+                                img,
                                 paragraphs,
                                 replies,
                             }) => (
                                 <Post
                                     key={id}
-                                    title={title}
+                                    postTitle={postTitle}
                                     description={description}
                                     date={date}
-                                    imagePath={imagePath}
-                                    imageAlt={imageAlt}
-                                    imageTitle={imageTitle}
+                                    img={img}
                                     paragraphs={paragraphs}
                                     replies={replies}
                                 />
@@ -133,19 +126,15 @@ const Home = () => {
                                 {popularPosts?.map(
                                     ({
                                         id,
-                                        title,
+                                        popularPostTitle,
                                         description,
-                                        imgPath,
-                                        imgAlt,
-                                        imgTitle,
+                                        img,
                                     }) => (
                                         <PopularPost
                                             key={id}
-                                            title={title}
+                                            popularPostTitle={popularPostTitle}
                                             description={description}
-                                            imgPath={imgPath}
-                                            imgAlt={imgAlt}
-                                            imgTitle={imgTitle}
+                                            img={img}
                                         />
                                     )
                                 )}
@@ -177,16 +166,14 @@ const Home = () => {
                             <BlackH2>Inspiration</BlackH2>
                             <WhiteContainer>
                                 <div className="grid grid-cols-2 gap-4">
-                                    {inspirations?.map(
-                                        ({ id, imgPath, imgAlt, imgTitle }) => (
-                                            <Image
-                                                key={id}
-                                                src={imgPath}
-                                                alt={imgAlt}
-                                                title={imgTitle}
-                                            />
-                                        )
-                                    )}
+                                    {inspirations?.map(({ id, img }) => (
+                                        <Image
+                                            key={id}
+                                            src={img.src}
+                                            alt={img.alt}
+                                            title={img.imgTitle}
+                                        />
+                                    ))}
                                 </div>
                             </WhiteContainer>
                         </section>
@@ -233,7 +220,7 @@ const Home = () => {
                     closeSubscriptionModal={closeSubscriptionModal}
                 />
             </main>
-            <Footer scrollToSection={scrollToSection} topRef={topRef} />
+            <Footer />
         </>
     );
 };

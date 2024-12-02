@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { openSans } from "@/app/font";
+import { openSans } from "@/app/utils/font";
 
 interface ITag {
     children: ReactNode;

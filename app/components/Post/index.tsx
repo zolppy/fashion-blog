@@ -2,39 +2,33 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { IPost } from "@/app/mock/posts";
 import Paragraph from "@/app/components/Paragraph";
 import LikeButton from "@/app/components/LikeButton";
 import RepliesButton from "@/app/components/RepliesButton";
-import Reply from "../Reply";
+import Reply from "@/app/components/Reply";
+import IPost from "@/app/utils/interfaces/post";
 
 const Post = ({
-    title,
+    postTitle,
     description,
     date,
-    imagePath,
-    imageAlt,
-    imageTitle,
+    img,
     paragraphs,
     replies,
 }: Omit<IPost, "id">) => {
+    const { src, alt, imgTitle } = img;
     const [repliesIsVisible, setRepliesIsVisible] = useState<boolean>();
 
-    const toggleRepliesIsVisible = () => {
+    const toggleShowReplies = () => {
         setRepliesIsVisible((prevRepliesIsVisible) => !prevRepliesIsVisible);
     };
 
     return (
         <article className="bg-white p-6 text-center flex flex-col gap-y-4">
-            <h2 className="text-3xl uppercase">{title}</h2>
+            <h2 className="text-3xl uppercase">{postTitle}</h2>
             <p className="text-lg">{description}</p>
             <span className="text-gray-500">{date}</span>
-            <Image
-                src={imagePath}
-                alt={imageAlt}
-                title={imageTitle}
-                className="w-full"
-            />
+            <Image src={src} alt={alt} title={imgTitle} className="w-full" />
             {paragraphs?.map(({ id, content }) => (
                 <Paragraph key={id}>{content}</Paragraph>
             ))}
@@ -42,7 +36,7 @@ const Post = ({
                 <LikeButton />
                 <RepliesButton
                     repliesTotal={replies.length}
-                    handleModalIsVisible={toggleRepliesIsVisible}
+                    handleModalIsVisible={toggleShowReplies}
                 />
             </div>
             <div>
@@ -51,27 +45,15 @@ const Post = ({
                 )}
                 <ul className="flex flex-col gap-y-8">
                     {repliesIsVisible &&
-                        replies?.map(
-                            ({
-                                id,
-                                name,
-                                time,
-                                comment,
-                                imagePath,
-                                imageAlt,
-                                imageTitle,
-                            }) => (
-                                <Reply
-                                    key={id}
-                                    name={name}
-                                    time={time}
-                                    comment={comment}
-                                    imagePath={imagePath}
-                                    imageAlt={imageAlt}
-                                    imageTitle={imageTitle}
-                                />
-                            )
-                        )}
+                        replies?.map(({ id, name, time, comment, img }) => (
+                            <Reply
+                                key={id}
+                                name={name}
+                                time={time}
+                                comment={comment}
+                                img={img}
+                            />
+                        ))}
                 </ul>
             </div>
         </article>
