@@ -1,7 +1,7 @@
 import type IPopularPost from "@/app/utils/interfaces/popularPost";
-import smoke from "@/public/avatar-smoke.jpg";
-import bandMember from "@/public/band-member.jpg";
-import workshop from "@/public/workshop.jpg";
+import smokyAtmosphere from "@/public/man-in-smoky-atmosphere.jpg";
+import bandMember from "@/public/band-member-fashion-shot.jpg";
+import fashionWorkshop from "@/public/fashion-workshop.jpg";
 
 const popularPosts: IPopularPost[] = [
     {
@@ -9,9 +9,9 @@ const popularPosts: IPopularPost[] = [
         popularPostTitle: "Denim",
         description: "Sed mattis nunc",
         img: {
-            src: smoke,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ispum",
+            src: smokyAtmosphere,
+            alt: "Man in a dimly lit setting with smoke effects in the background.",
+            imgTitle: "Dramatic Atmosphere with Smoke",
         },
     },
     {
@@ -20,8 +20,8 @@ const popularPosts: IPopularPost[] = [
         description: "Praes tinci sed",
         img: {
             src: bandMember,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ispum",
+            alt: "Band member posing with modern and casual clothing.",
+            imgTitle: "Fashion and Music in Harmony",
         },
     },
     {
@@ -29,9 +29,9 @@ const popularPosts: IPopularPost[] = [
         popularPostTitle: "Workshop",
         description: "Ultricies congue",
         img: {
-            src: workshop,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ispum",
+            src: fashionWorkshop,
+            alt: "Workshop setting focused on creativity and fashion design.",
+            imgTitle: "Innovation in a Fashion Workshop",
         },
     },
     {
@@ -39,9 +39,9 @@ const popularPosts: IPopularPost[] = [
         popularPostTitle: "Trends",
         description: "Lorem ipsum dipsum",
         img: {
-            src: smoke,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ispum",
+            src: smokyAtmosphere,
+            alt: "Man in a dimly lit setting with smoke effects in the background.",
+            imgTitle: "Dramatic Atmosphere with Smoke",
         },
     },
 ];

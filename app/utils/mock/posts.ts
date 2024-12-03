@@ -1,13 +1,13 @@
 import type IPost from "@/app/utils/interfaces/post";
-import girlHat from "@/public/girl-hat.jpg";
-import manHat from "@/public/man-hat.jpg";
-import smoke from "@/public/avatar-smoke.jpg";
-import girlTrain from "@/public/girl-train.jpg";
-import girl from "@/public/girl.jpg";
-import runway from "@/public/runway.jpg";
-import girlMountain from "@/public/girl-mountain.jpg";
-import boy from "@/public/boy.jpg";
-import girlHood from "@/public/girl-hood.jpg";
+import wideBrimHat from "@/public/woman-with-wide-brim-hat.jpg";
+import manOutdoorHat from "@/public/man-stylish-outdoor-hat.jpg";
+import smokyAtmosphere from "@/public/man-in-smoky-atmosphere.jpg";
+import urbanTrain from "@/public/woman-urban-train-setting.jpg";
+import womanPortrait from "@/public/elegant-woman-portrait.jpg";
+import models from "@/public/model-walking-runway.jpg";
+import mountainLandscape from "@/public/woman-mountain-landscape.jpg";
+import outdoorStyle from "@/public/smiling-boy-outdoor-style.jpg";
+import hood from "@/public/woman-with-hooded-coat.jpg";
 
 const posts: IPost[] = [
     {
@@ -16,9 +16,9 @@ const posts: IPost[] = [
         description: "Lorem ipsum dolor sit amet",
         date: "May 2, 2016",
         img: {
-            src: girlHat,
-            alt: "Woman wearing a hat. There is a sea in the background.",
-            imgTitle: "Girl Hat",
+            src: wideBrimHat,
+            alt: "Young woman with a wide-brimmed hat in an outdoor setting.",
+            imgTitle: "Elegance with a Hat",
         },
         paragraphs: [
             {
@@ -44,9 +44,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: smoke,
-                    alt: "A man wearing a black jacket and smoking",
-                    imgTitle: "George",
+                    src: smokyAtmosphere,
+                    alt: "Man in a dimly lit setting with smoke effects in the background.",
+                    imgTitle: "Dramatic Atmosphere with Smoke",
                 },
             },
         ],
@@ -57,9 +57,9 @@ const posts: IPost[] = [
         description: "Lorem ipsum dolor sit amet",
         date: "April 23, 2016",
         img: {
-            src: manHat,
-            alt: "Black man wearing black hat, glasses and dress shirt.",
-            imgTitle: "Man Hat",
+            src: manOutdoorHat,
+            alt: "Man wearing a hat and stylish clothes in an outdoor setting.",
+            imgTitle: "Hat and Masculine Style",
         },
         paragraphs: [
             {
@@ -86,9 +86,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: girlTrain,
-                    alt: "Lorem ipsum dolor sit amet consectetur",
-                    imgTitle: "Lorem ipsum",
+                    src: urbanTrain,
+                    alt: "Woman standing next to a train with urban and casual style.",
+                    imgTitle: "Urban Style on the Move",
                 },
             },
             {
@@ -102,9 +102,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: girl,
-                    alt: "Lorem ipsum dolor sit amet consectetur",
-                    imgTitle: "Lorem ipsum",
+                    src: womanPortrait,
+                    alt: "Portrait of a woman in a neutral background with an elegant look.",
+                    imgTitle: "Simple Elegance",
                 },
             },
         ],
@@ -115,9 +115,9 @@ const posts: IPost[] = [
         description: "Lorem ipsum dolor sit amet",
         date: "April 7, 2016",
         img: {
-            src: runway,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ipsum",
+            src: models,
+            alt: "Model walking on a runway during a fashion show.",
+            imgTitle: "Fashion in the Spotlight on the Runway",
         },
         paragraphs: [
             {
@@ -144,9 +144,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: girlMountain,
-                    alt: "Lorem ipsum dolor sit amet consectetur",
-                    imgTitle: "Jane",
+                    src: mountainLandscape,
+                    alt: "Young woman posing in a mountainous landscape, wearing comfortable clothing.",
+                    imgTitle: "Fashion for Outdoor Adventures",
                 },
             },
             {
@@ -161,9 +161,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: boy,
-                    alt: "Lorem ipsum dolor sit amet consectetur",
-                    imgTitle: "John",
+                    src: outdoorStyle,
+                    alt: "Smiling boy outdoors wearing casual clothing.",
+                    imgTitle: "Youth and Style",
                 },
             },
             {
@@ -177,9 +177,9 @@ const posts: IPost[] = [
                     },
                 ],
                 img: {
-                    src: girlHood,
-                    alt: "Lorem ipsum dolor sit amet consectetur",
-                    imgTitle: "Anja",
+                    src: hood,
+                    alt: "Woman wearing a hooded coat on a cold day.",
+                    imgTitle: "Style for Cold Days",
                 },
             },
         ],

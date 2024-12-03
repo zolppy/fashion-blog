@@ -1,40 +1,40 @@
 import type IInspiration from "@/app/utils/interfaces/inspiration";
-import jeans from "@/public/jeans.jpg";
-import avatarHat from "@/public/avatar-hat.jpg";
-import team1 from "@/public/team-1.jpg";
-import team4 from "@/public/team-4.jpg";
+import jeansDisplay from "@/public/folded-jeans-display.jpg";
+import vintageHat from "@/public/woman-with-vintage-hat.jpg";
+import closeTheSea from "@/public/woman-close-of-sea.jpg";
+import lookingSky from "@/public/looking-sky.jpg";
 
 const inspirations: IInspiration[] = [
     {
         id: 1,
         img: {
-            src: jeans,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ipsum",
+            src: jeansDisplay,
+            alt: "Folded jeans set on display, highlighting casual style.",
+            imgTitle: "Denim Fashion: Classic and Timeless",
         },
     },
     {
         id: 2,
         img: {
-            src: avatarHat,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ipsum",
+            src: vintageHat,
+            alt: "Woman wearing vintage style hat on a neutral background.",
+            imgTitle: "Classic Style with Hat",
         },
     },
     {
         id: 3,
         img: {
-            src: team1,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ipsum",
+            src: closeTheSea,
+            alt: "Woman wearing a black hat and a pink blouse, close of sea.",
+            imgTitle: "Close of Sea",
         },
     },
     {
         id: 4,
         img: {
-            src: team4,
-            alt: "Lorem ipsum dolor sit amet consectetur",
-            imgTitle: "Lorem ipsum",
+            src: lookingSky,
+            alt: "Black man wearing sunglasses, looking for sky",
+            imgTitle: "Looking sky",
         },
     },
 ];

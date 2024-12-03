@@ -26,8 +26,8 @@ import posts from "@/app/utils/mock/posts";
 import popularPosts from "@/app/utils/mock/popularPosts";
 import tags from "@/app/utils/mock/tags";
 import { openSans } from "@/app/utils/font";
-import jane from "@/public/jane.jpg";
-import avatarGirl2 from "@/public/avatar-girl-2.jpg";
+import jane from "@/public/modern-woman-short-hair.jpg";
+import casualPortrait from "@/public/young-woman-casual-portrait.jpg";
 import inspirations from "@/app/utils/mock/inspiration";
 
 const Home = () => {
@@ -62,8 +62,8 @@ const Home = () => {
                 <section className="relative">
                     <Image
                         src={jane}
-                        alt="Woman with long hair, wearing sunglasses, white skirt, black blouse and clogs"
-                        title="Jane"
+                        alt="Woman with short hair and a modern look, posing casually."
+                        title="Modern Style with Jane"
                     />
                     <div className="absolute -translate-x-1/2 -translate-y-1/2 left-[20%] top-1/2 flex flex-col gap-y-4 md:left-[25%]">
                         <h2 className="text-white text-4xl">Jane&apos;s</h2>
@@ -102,9 +102,9 @@ const Home = () => {
                     <div className="flex flex-col gap-y-8 lg:w-[35%]">
                         <section>
                             <Image
-                                src={avatarGirl2}
-                                alt="Lorem ipsum dolor sit amet consectetur"
-                                title="Lorem ispum"
+                                src={casualPortrait}
+                                alt="Portrait of a young woman smiling with loose hair and casual clothing."
+                                title="Casual Portrait of a Young Woman"
                                 className="w-full grayscale-[70%]"
                             />
                             <div className="bg-black text-white p-4 flex flex-col gap-y-4">
