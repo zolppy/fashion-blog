@@ -4,7 +4,10 @@
         <img src="https://img.shields.io/badge/NEXT-15.0.3-purple" />
         <img src="https://img.shields.io/badge/TAILWIND CSS-3.4.1-indigo" />
         <img src="https://img.shields.io/badge/TYPESCRIPT-5-red" />
-        <img src="https://img.shields.io/badge/STATUS-DEVELOPMENT-orange" />
+        <img src="https://img.shields.io/badge/REACT ICONS-5.3.0-violet" />
+        <img src="https://img.shields.io/badge/FRAMER MOTION-11.12.0-pink" />
+        <img src="https://img.shields.io/badge/DOCKER-27.3.1-cyan" />
+        <img src="https://img.shields.io/badge/STATUS-FINISHED-green" />
         <img src="https://img.shields.io/badge/LICENSE-MIT-yellow" />
     </ul>
     <p>Landing page for a fashion blog, developed with Next.js and Tailwind CSS.</p>
@@ -20,7 +23,10 @@
 ## Technologies
 - Next.js;
 - Tailwind CSS;
-- TypeScript.
+- TypeScript;
+- Docker;
+- Framer Motion;
+- React Icons.
 
 ## Demo
 
