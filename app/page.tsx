@@ -21,6 +21,7 @@ import SubscribeButtonRed from "@/app/components/SubscribeButtonRed";
 import SubscriptionModal from "@/app/components/SubscriptionModal";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import CoffeeBtn from "@/app/components/CoffeeBtn";
 import { useTopRefCtx } from "@/app/context/TopRefCtx";
 import posts from "@/app/utils/mock/posts";
 import popularPosts from "@/app/utils/mock/popularPosts";
@@ -219,6 +220,7 @@ const Home = () => {
                     modalIsOpen={modalIsOpen}
                     closeSubscriptionModal={closeSubscriptionModal}
                 />
+                <CoffeeBtn />
             </main>
             <Footer />
         </>
