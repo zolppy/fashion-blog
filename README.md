@@ -30,7 +30,7 @@
 
 ## Demo
 
-You can access the page <a href="https://fashion-blog-i.vercel.app/">here</a>.
+You can access the page <a href="https://fashion-blog-zol.vercel.app">here</a>.
 
 ## Screenshots
 ![1](https://github.com/user-attachments/assets/beea1901-bd01-479a-86c5-632eba47e0d3)
