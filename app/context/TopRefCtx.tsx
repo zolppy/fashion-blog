@@ -1,47 +1,47 @@
 "use client";
 
 import {
-    createContext,
-    MutableRefObject,
-    ReactNode,
-    useContext,
-    useRef,
+  createContext,
+  MutableRefObject,
+  ReactNode,
+  useContext,
+  useRef,
 } from "react";
 
 interface ITopRefCtx {
-    topRef: MutableRefObject<HTMLDivElement | null>;
-    scrollToTop: () => void;
+  topRef: MutableRefObject<HTMLDivElement | null>;
+  scrollToTop: () => void;
 }
 
 const TopRefCtx = createContext<ITopRefCtx | undefined>(undefined);
 
 const useTopRefCtx = (): ITopRefCtx => {
-    const ctx = useContext(TopRefCtx);
+  const ctx = useContext(TopRefCtx);
 
-    if (!ctx) {
-        throw new Error();
-    }
+  if (!ctx) {
+    throw new Error();
+  }
 
-    return ctx;
+  return ctx;
 };
 
 const TopRefCtxProvider = ({ children }: { children: ReactNode }) => {
-    const topRef = useRef<HTMLDivElement | null>(null);
+  const topRef = useRef<HTMLDivElement | null>(null);
 
-    const scrollToTop = () => {
-        topRef?.current?.scrollIntoView({ behavior: "smooth" });
-    };
+  const scrollToTop = () => {
+    topRef?.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-    return (
-        <TopRefCtx.Provider
-            value={{
-                topRef,
-                scrollToTop,
-            }}
-        >
-            {children}
-        </TopRefCtx.Provider>
-    );
+  return (
+    <TopRefCtx.Provider
+      value={{
+        topRef,
+        scrollToTop,
+      }}
+    >
+      {children}
+    </TopRefCtx.Provider>
+  );
 };
 
 export { TopRefCtxProvider, useTopRefCtx };

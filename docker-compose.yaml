@@ -1,6 +1,6 @@
 services:
-    app:
-        build: .
-        container_name: fashion-blog
-        ports:
-            - 3001:3001
+  app:
+    build: .
+    container_name: fashion-blog
+    ports:
+      - 3001:3001

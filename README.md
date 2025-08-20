@@ -14,6 +14,7 @@
 </div>
 
 ## Features
+
 - Responsive design;
 - Subscribe form;
 - Like button;
@@ -21,6 +22,7 @@
 - Comments of posts.
 
 ## Technologies
+
 - Next.js;
 - Tailwind CSS;
 - TypeScript;
@@ -33,6 +35,7 @@
 You can access the page <a href="https://fashion-blog-zol.vercel.app">here</a>.
 
 ## Screenshots
+
 ![1](https://github.com/user-attachments/assets/beea1901-bd01-479a-86c5-632eba47e0d3)
 ![2](https://github.com/user-attachments/assets/cc9fd6ff-f3f0-4a5e-a8be-d67b2a591db2)
 ![3](https://github.com/user-attachments/assets/496130c8-0a33-4e6b-b90f-8bf33c597920)

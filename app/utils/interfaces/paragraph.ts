@@ -1,6 +1,6 @@
 interface IParagraph {
-    id: number;
-    content: string;
+  id: number;
+  content: string;
 }
 
 export default IParagraph;
