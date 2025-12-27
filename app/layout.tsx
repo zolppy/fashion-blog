@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { TopRefCtxProvider } from "@/app/context/TopRefCtx";
 import { oswald } from "@/app/utils/font";
 import "@/app/globals.css";
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body className={`${oswald.className} antialiased bg-[#f1f1f1]`}>
         <TopRefCtxProvider>{children}</TopRefCtxProvider>
       </body>
-      <GoogleAnalytics gaId="G-BL0G7C98H9" />
     </html>
   );
 }
